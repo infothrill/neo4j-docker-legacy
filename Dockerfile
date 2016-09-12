@@ -23,6 +23,7 @@ RUN mv data /data \
 VOLUME /data
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY trap.sh /trap.sh
 
 EXPOSE 7474 7473
 

@@ -24,8 +24,9 @@ VOLUME /data
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY trap.sh /trap.sh
+COPY initneo4j.sh /initneo4j.sh
 
 EXPOSE 7474 7473
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/initneo4j.sh"]
 CMD ["neo4j"]

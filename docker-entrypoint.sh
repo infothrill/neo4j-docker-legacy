@@ -67,7 +67,8 @@ if [ "$1" == "neo4j" ]; then
         find /plugins -type f -exec cp {} plugins \;
     fi
 
-    exec bin/neo4j console
+    exec /trap.sh
+    #exec bin/neo4j console
 elif [ "$1" == "dump-config" ]; then
     if [ -d /conf ]; then
         cp --recursive conf/* /conf
